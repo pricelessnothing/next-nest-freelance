@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:alpine
+    ports:
+      - 5432:5432
+    container_name: postgres
+    restart: on-failure
+    env_file:
+      - ./env/postgres.env
+    volumes:
+      - pg_freelance:/var/lib/postgresql/data
+
+volumes:
+  pg_freelance:
