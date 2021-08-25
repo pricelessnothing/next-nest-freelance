@@ -18,6 +18,9 @@
     "allowJs": true /* Allow javascript files to be compiled. Useful when migrating JS to TS */,
     "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
   },
+  "watchOptions": {
+    "synchronousWatchDirectory": true,
+  },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"] // *** The files to not type check ***
 }

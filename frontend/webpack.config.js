@@ -8,6 +8,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'bundle.js',
   },
 
@@ -21,7 +22,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
+        test: /\.s[ca]ss$/,
         use: ['style-loader', 'css-loader'],
       },
       {
@@ -51,6 +52,7 @@ module.exports = {
   ],
 
   devServer: {
+    historyApiFallback: true,
     port: 3001,
     hot: true,
     compress: true,

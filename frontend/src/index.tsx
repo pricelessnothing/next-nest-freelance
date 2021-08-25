@@ -1,5 +1,12 @@
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-import { HomePage } from './views/Home'
+import { Router } from './router'
 
-ReactDOM.render(<HomePage />, document.getElementById('app'))
+const App = () => (
+  <BrowserRouter>
+    <Router />
+  </BrowserRouter>
+)
+
+ReactDOM.render(<App />, document.getElementById('app'))
