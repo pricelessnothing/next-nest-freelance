@@ -3,6 +3,8 @@ import { BrowserRouter } from 'react-router-dom'
 
 import { Router } from './router'
 
+import './styles/global.sass'
+
 const App = () => (
   <BrowserRouter>
     <Router />

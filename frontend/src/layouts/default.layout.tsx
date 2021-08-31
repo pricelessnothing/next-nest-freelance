@@ -1,7 +1,17 @@
 import { Route } from 'react-router-dom'
+import { Footer } from '../components/footer/footer'
+import { Header } from '../components/header/header'
 import { CustomRouteProps, LayoutProps } from '../types/layouts'
 
-const DefaultLayout = ({ children }: LayoutProps) => <div>{children}</div>
+import './default.layout.sass'
+
+const DefaultLayout = ({ children }: LayoutProps) => (
+  <>
+    <Header />
+    <main>{children}</main>
+    <Footer />
+  </>
+)
 
 const DefaultLayoutRoute = ({
   component: Component,

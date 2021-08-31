@@ -22,11 +22,11 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.s[ca]ss$/,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.sass$/,
+        test: /\.s[ac]ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
