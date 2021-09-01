@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FormLogin } from '../../components/form-login/form-login'
 import './Auth.sass'
 
 export const AuthPage = () => {
@@ -19,7 +20,7 @@ export const AuthPage = () => {
           Регистрация
         </button>
       </div>
-      {isRegistered ? <p>Registered</p> : <p>NotRegistered</p>}
+      {isRegistered ? <FormLogin /> : <p>NotRegistered</p>}
     </div>
   )
 }

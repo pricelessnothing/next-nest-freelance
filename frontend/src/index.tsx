@@ -1,14 +1,14 @@
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import { App } from './App'
+import { rootReducer } from './components/store/rootReducer'
 
-import { Router } from './router'
+const store = createStore(rootReducer)
 
-import './styles/global.sass'
-
-const App = () => (
-  <BrowserRouter>
-    <Router />
-  </BrowserRouter>
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app'),
 )
-
-ReactDOM.render(<App />, document.getElementById('app'))

@@ -58,4 +58,8 @@ module.exports = {
     compress: true,
     open: false,
   },
+
+  watchOptions: {
+    ignored: /node_modules/,
+  },
 }

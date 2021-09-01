@@ -1,4 +1,4 @@
-import { UserType } from '../../types/userTypes';
+import { UserType } from '../../../types/userTypes';
 
 export class CreateUserDto {
   type: UserType;
