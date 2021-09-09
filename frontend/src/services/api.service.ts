@@ -22,3 +22,12 @@ export async function loginUser(login: string, password: string) {
 
   return data
 }
+
+export async function registerUser(user: User) {
+  const { data } = await axios.post('auth/register', {
+    ...user,
+    password: md5(user.password),
+  })
+
+  return data
+}

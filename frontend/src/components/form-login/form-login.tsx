@@ -24,7 +24,7 @@ export const FormLogin = () => {
   return (
     <form className="form-login" onSubmit={handleFormSubmit}>
       <label htmlFor="login" className="form-login__label">
-        Login
+        Логин
       </label>
       <input
         className="form-login__input"
@@ -35,7 +35,7 @@ export const FormLogin = () => {
         onChange={handleLoginChange}
       />
       <label htmlFor="password" className="form-login__label">
-        Password
+        Пароль
       </label>
       <input
         className="form-login__input"
@@ -46,7 +46,7 @@ export const FormLogin = () => {
         onChange={handlePasswordChange}
       />
       <button className="form-login__submit-btn" type="submit">
-        Log in
+        Войти
       </button>
     </form>
   )

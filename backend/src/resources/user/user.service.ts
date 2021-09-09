@@ -12,7 +12,7 @@ export class UserService {
   ) {}
 
   async create(createUserDto: CreateUserDto) {
-    return await this.userRepository.insert(createUserDto);
+    return await this.userRepository.create(createUserDto);
   }
 
   async findAll() {
