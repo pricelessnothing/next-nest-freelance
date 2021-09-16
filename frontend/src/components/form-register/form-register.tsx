@@ -1,10 +1,13 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
-import { registerUser } from '../../services/api.service'
+import { useDispatch } from 'react-redux'
+import { registerAction } from '../../store/auth/actions'
 import { User } from '../../types/user'
 import './form-register.sass'
 
 export const FormRegister = () => {
-  const [formData, setFormData] = useState({
+  const dispatch = useDispatch()
+
+  const [formData, setFormData] = useState<Partial<User>>({
     type: 'freelancer',
     login: '',
     name: '',
@@ -23,7 +26,7 @@ export const FormRegister = () => {
 
   async function handleFormSubmit(e: FormEvent) {
     e.preventDefault()
-    console.log(await registerUser(formData as User))
+    dispatch(registerAction(formData))
   }
 
   return (

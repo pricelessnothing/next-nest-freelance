@@ -5,3 +5,8 @@ export type User = {
   password: string
   name: string
 }
+
+export type UserCredentials = {
+  login: string
+  password: string
+}

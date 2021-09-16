@@ -1,6 +1,6 @@
 import { Route } from 'react-router-dom'
-import { Footer } from '../components/footer/footer'
-import { Header } from '../components/header/header'
+import { Footer } from '../components/layout/footer/footer'
+import { Header } from '../components/layout/header/header'
 import { CustomRouteProps, LayoutProps } from '../types/layouts'
 
 import './default.layout.sass'

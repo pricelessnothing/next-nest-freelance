@@ -1,9 +1,12 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
-import { loginUser } from '../../services/api.service'
+import { useDispatch } from 'react-redux'
+import { loginRequestAction } from '../../store/auth/actions'
 
 import './form-login.sass'
 
 export const FormLogin = () => {
+  const dispatch = useDispatch()
+
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
 
@@ -17,8 +20,7 @@ export const FormLogin = () => {
 
   function handleFormSubmit(e: FormEvent) {
     e.preventDefault()
-
-    loginUser(login, password)
+    dispatch(loginRequestAction({ login, password }))
   }
 
   return (

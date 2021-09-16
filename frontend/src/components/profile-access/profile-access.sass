@@ -1,0 +1,19 @@
+@import '../../styles/colors'
+
+.profile-access
+  position: relative
+  &__username
+    cursor: pointer
+  &__menu
+    position: absolute
+    right: -1em
+    top: calc(100% + 1em)
+    flex-direction: column
+    background: #fff
+    box-shadow: 0 5px 15px rgba(0,0,0,.46)
+    display: none
+    &--opened
+      display: flex
+    &__item
+      text-align: right
+      padding: 1em
